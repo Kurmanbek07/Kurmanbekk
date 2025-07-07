@@ -1,0 +1,133 @@
+// #start {
+//   .start {
+//     background-color: white;
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+//     padding: 30px 0;
+//     h1 {
+//       font-size: 50px;
+//     }
+//     // &--width {
+//     //     width: 800px;
+//     //     display: flex;
+//     //     flex-direction: column;
+//     //   &__flex {
+//     //     margin-top: 90px;
+//     //     display: flex;
+//     //     align-items: flex-start;
+//     //     justify-content: space-around;
+//     //     a {
+//     //       font-size: 100px;
+//     //     }
+//     //     &--text {
+//     //       display: flex;
+//     //       align-items: flex-start;
+//     //       flex-direction: column;
+//     //       gap: 10px;
+//     //       h1 {
+//     //         font-size: 33px;
+//     //         color: red;
+//     //       }
+//     //       h2 {
+//     //         font-size: 24px;
+//     //       }
+//     //       p {
+//     //         font-size: 20px;
+//     //       }
+//     //     }
+//     //   }
+//     // }
+   
+      
+//   }
+// }
+#start {
+    .start {
+      // background-color: white;
+      color: white;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 30px 0;
+      h1 {
+        font-size: 55px;
+      }
+  
+      &--width {
+        margin-top: 100px;
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        margin-left:380px;
+        gap:  80px 0;
+        // &__flex {
+        //   margin-top: 90px;
+        //   display: flex;
+        //   align-items: center; // центрируем по вертикали
+        //   justify-content: space-around;
+        //   gap: 40px;
+  
+        //   a {
+        //     font-size: 80px;
+        //     color: purple;
+        //     flex-shrink: 0;
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //   }
+  
+        //   &--text {
+        //     display: flex;
+        //     flex-direction: column;
+        //     gap: 10px;
+  
+        //     h1 {
+        //       font-size: 33px;
+        //       color: red;
+        //     }
+  
+        //     h2 {
+        //       font-size: 24px;
+        //     }
+  
+        //     p {
+        //       font-size: 20px;
+        //     }
+        //   }
+        // }
+        &__flex {
+            display: flex;
+            align-items: flex-start; 
+            gap: 150px; 
+            margin-bottom: 50px;
+            a {
+              font-size: 90px; 
+              color:white;
+              flex-shrink: 0; 
+            }
+          
+            &--text {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+          
+              h1 {
+                font-size: 26px;
+                // color: black;
+              }
+              h2 {
+                font-size: 18px;
+                text-transform: uppercase;
+              }
+              p {
+                font-size: 18px;
+                line-height: 1.4;
+              }
+            }
+          }
+          
+      }
+    }
+  }
+  
