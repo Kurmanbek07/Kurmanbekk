@@ -1,4 +1,6 @@
-# React + Vite
+# Kurmanbekk
+
+My React Vite project based on React + Vite template.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
