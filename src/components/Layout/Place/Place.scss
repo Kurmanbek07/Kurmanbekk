@@ -1,0 +1,236 @@
+
+// #place {
+//   .place {
+//     color: white;
+//     height: auto;
+//     padding: 60px 0;
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+//     justify-content: center;
+//     gap: 40px;
+
+//     h1 {
+//       font-size: 55px;
+//       text-align: center;
+//     }
+
+//     h2 {
+//       margin-top: 20px;
+//       text-align: center;
+//     }
+
+//     &--text {
+//       padding: 10px;
+//       margin-top: 20px;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       align-items: center;
+//       gap: 10px;
+
+//       h2 {
+//         font-size: 40px;
+//       }
+//     }
+
+//     &--map {
+//       width: 100%;
+//       height: 550px;
+//       overflow: hidden;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//     }
+
+//     // ✅ Медиа-запросы
+
+//     @media (max-width: 1024px) {
+//       h1 {
+//         font-size: 45px;
+//       }
+
+//       &--text h2 {
+//         font-size: 32px;
+//       }
+
+//       &--map {
+//         height: 450px;
+//       }
+//     }
+
+//     @media (max-width: 768px) {
+//       h1 {
+//         font-size: 36px;
+//       }
+
+//       &--text h2 {
+//         font-size: 28px;
+//       }
+
+//       &--map {
+//         height: 400px;
+//       }
+//     }
+
+//     @media (max-width: 480px) {
+//       padding: 40px 0;
+//       gap: 30px;
+
+//       h1 {
+//         font-size: 28px;
+//       }
+
+//       &--text h2 {
+//         font-size: 24px;
+//         text-align: center;
+//       }
+
+//       &--map {
+//         height: 300px;
+//       }
+//     }
+//   }
+// }
+#place {
+  .place {
+    color: white;
+    height: auto;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+
+    h1,
+    h2 {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: none;
+    }
+
+    h1 {
+      font-size: 55px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    &--text {
+      padding: 10px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      h2 {
+        font-size: 40px;
+      }
+    }
+
+    &--map {
+      width: 100%;
+      height: 550px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    // Медиа-запросы
+    @media (max-width: 1024px) {
+      h1 {
+        font-size: 45px;
+      }
+
+      &--text h2 {
+        font-size: 32px;
+      }
+
+      &--map {
+        height: 450px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
+
+      &--text h2 {
+        font-size: 28px;
+      }
+
+      &--map {
+        height: 400px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      padding: 40px 0;
+      gap: 30px;
+
+      h1 {
+        font-size: 28px;
+      }
+
+      &--text h2 {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      &--map {
+        height: 300px;
+      }
+    }
+  }
+
+  // Класс для анимации появления
+  &.fadeInUp {
+    .place {
+      h1,
+      h2 {
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+      }
+
+      h1 {
+        animation-delay: 0s;
+      }
+
+      .place--text h2:nth-child(1) {
+        animation-delay: 0.2s;
+      }
+      .place--text h2:nth-child(2) {
+        animation-delay: 0.4s;
+      }
+      .place--text h2:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+
+      // Последний большой h2 под картой
+      > h2 {
+        animation-delay: 0.8s;
+      }
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

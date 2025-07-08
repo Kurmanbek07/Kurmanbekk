@@ -1,0 +1,137 @@
+// #time{
+//     padding: 30px 0;
+//     h1{
+//         text-align: center;
+//         font-size: 60px;
+//     }
+//     .time{
+//         color: white;
+//         &--flex{
+//             padding: 35px 0;
+//             display: flex;
+//             align-items: center;
+//             text-align: center;
+//             justify-content: center;
+//             gap: 30px;
+//             &__count{
+//                 h2{
+//                     font-size: 44px;
+//                 }
+//                 small{
+//                     font-size: 20px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+#time {
+    padding: 60px 0;
+  
+    h1 {
+      text-align: center;
+      font-size: 60px;
+      color: white;
+      margin-bottom: 40px;
+      font-family: 'Playfair Display', serif;
+    }
+  
+    .time {
+      color: white;
+  
+      &--flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 20px;
+  
+        &__count {
+          background: rgba(255, 255, 255, 0.08);
+          padding: 30px 20px;
+          border-radius: 12px;
+          min-width: 100px;
+          opacity: 0;
+          transform: scale(0.9);
+          transition: all 0.6s ease-out;
+  
+          h2 {
+            font-size: 44px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-family: 'Playfair Display', serif;
+          }
+  
+          small {
+            font-size: 23px;
+            font-family: 'Great Vibes', cursive;
+          }
+  
+          &.show {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  
+    // ✅ Адаптив
+    @media (max-width: 1024px) {
+      h1 {
+        font-size: 48px;
+      }
+  
+      .time--flex__count {
+        h2 {
+          font-size: 38px;
+        }
+  
+        small {
+          font-size: 20px;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
+  
+      .time--flex {
+        gap: 15px;
+      }
+  
+      .time--flex__count {
+        padding: 20px 15px;
+  
+        h2 {
+          font-size: 30px;
+        }
+  
+        small {
+          font-size: 18px;
+        }
+      }
+    }
+  
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 28px;
+        line-height: 1.3;
+      }
+  
+      .time--flex__count {
+        min-width: 80px;
+  
+        h2 {
+          font-size: 26px;
+        }
+  
+        small {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  

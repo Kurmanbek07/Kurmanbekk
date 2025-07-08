@@ -1,0 +1,68 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap');
+
+#yrmat {
+  padding: 80px 0;
+
+  .yrmat {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    gap: 30px 0;
+    text-align: center;
+
+    h1, h2 {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1 {
+      font-size: 85px;
+      font-family: "Great Vibes", cursive;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-size: 55px;
+      font-family: 'Great Vibes', cursive;
+      color: #ffdfb9;
+    }
+  }
+}
+
+// Адаптив
+@media (max-width: 768px) {
+  #yrmat {
+    .yrmat {
+      h1 {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #yrmat {
+    .yrmat {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+    }
+  }
+}
